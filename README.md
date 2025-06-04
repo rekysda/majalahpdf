@@ -1,0 +1,2 @@
+# majalahpdf
+majalah02pdf
