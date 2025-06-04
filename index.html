@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipbook with Tailwind</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DearFlip CSS (version 1.7.3) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/css/dflip.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/css/themify-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center justify-start p-6">
+
+  <!-- Back Button -->
+  <a href="./" class="text-blue-600 hover:underline flex items-center mb-4 text-lg">
+    <i class="fas fa-arrow-circle-left mr-2"></i>Back
+  </a>
+
+  <!-- Flipbook Container -->
+  <div class="_df_book w-full max-w-5xl" id="df_manual_book"></div>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- DearFlip JS (version 1.7.3) -->
+  <script src="https://cdn.jsdelivr.net/npm/@dearhive/dearflip-jquery-flipbook@1.7.3/dflip/js/dflip.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      const pdf = 'pdf/sample.pdf'; // Ganti ini sesuai path PDF Anda
+
+      const options = {
+        enableDownload: false,
+        hideControls: "share",
+      };
+
+      $("#df_manual_book").flipBook(pdf, options);
+    });
+  </script>
+</body>
+</html>
